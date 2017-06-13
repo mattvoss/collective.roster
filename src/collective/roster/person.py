@@ -21,7 +21,7 @@ class PersonNameFromTitle(object):
     @property
     def title(self):
         title = _('person_name',
-                  default=u'${last_name} ${first_name}',
+                  default=u'${first_name} ${last_name}',
                   mapping={'first_name': IPerson(self.context).first_name,
                            'last_name': IPerson(self.context).last_name})
         return translate(title, context=api.portal.getRequest())

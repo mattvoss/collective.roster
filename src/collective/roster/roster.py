@@ -202,7 +202,7 @@ class NameColumn(column.LinkColumn):
         return ob.absolute_url()
 
     def getLinkContent(self, ob):
-        title = u'{0:s} {1:s}'.format(ob.last_name, ob.first_name)
+        title = u'{0:s}, {1:s}'.format(ob.last_name, ob.first_name)
         if type(title) != unicode:
             title = unicode(title, u'utf-8')
         return title
